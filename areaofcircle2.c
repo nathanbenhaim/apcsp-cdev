@@ -34,7 +34,7 @@ int main(int argc, char* argv[]){
   {
     printf("%s : expected 2 args, please enter two integers\n", argv[0]);
 
-	int input[256], start[256], end[256];
+	char input[256], start[256], end[256];
 
 	printf("input lower: \n");
 	fgets(input, 256, stdin);
@@ -68,17 +68,14 @@ int main(int argc, char* argv[]){
   if (start > end)
   {
     printf("Only positive integers accepted");
-  }
+return 1;  
+}
 
 
 
 
   // the two variables which control the number of times areaOfCircle is called
   // in this case 5.2, 6.2, 7.2
-
-  int reps = 3;
-
-
 
 
   // for testing only - do not change
@@ -95,4 +92,5 @@ for (float i = start; i <= end; i++){
 
 printf("area of circle with radius of %f is %f\n", i, area);
 
-}}
+}
+}
