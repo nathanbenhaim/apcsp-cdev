@@ -15,7 +15,7 @@ int getInputNumber()
   {
     fgets(inputBuff, BUFFSIZE, stdin);
     if (sscanf(inputBuff, "%ud", &num) == 1 && num >= 0) break;
-                
+
     printf("Not a valid number - try again!\n");
   }
   return num;
